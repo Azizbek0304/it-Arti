@@ -19,9 +19,9 @@
 .nav-items {
   display: flex;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Navigation links */
 .nav-links {
   margin-right: 20px;
 }
@@ -57,4 +57,26 @@
   text-decoration: none;
 }
 
-/* Add any additional styles as needed */
+/* Menu toggle */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Media query for screens up to 765px */
+@media (max-width: 765px) {
+  .nav-links,
+  .nav-list,
+  .nav-item {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-items.open {
+    transform: translateX(0);
+  }
+}
