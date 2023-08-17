@@ -1,0 +1,60 @@
+/* header.css */
+
+/* Navbar container */
+.navbar {
+  background-color: transparent; /* Set background color to white */
+  color: #333; /* Dark text color */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo img {
+  width: 100px; /* Adjust as needed */
+}
+
+/* Navigation items container */
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation links */
+.nav-links {
+  margin-right: 20px;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+.nav-item a {
+  color: #333; /* Dark text color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #ffc107; /* Change to your preferred hover color */
+}
+
+/* Basket icon */
+.basket-icon {
+  font-size: 24px;
+}
+
+.basket-icon a {
+  color: #333; /* Dark text color */
+  text-decoration: none;
+}
+
+/* Add any additional styles as needed */
