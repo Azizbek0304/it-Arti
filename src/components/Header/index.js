@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { faBars, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
 
 const Navbar = () => {
@@ -25,11 +27,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="menu-toggle" onClick={handleMenuToggle}>
-          <i className="fas fa-bars"></i>
+          <FontAwesomeIcon icon={faBars} />
         </div>
         <div className="basket-icon">
           <a href="/basket">
-            <i className="fas fa-shopping-basket"></i>
+            <FontAwesomeIcon icon={faShoppingBasket} />
           </a>
         </div>
       </div>
