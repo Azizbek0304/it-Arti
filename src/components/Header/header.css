@@ -2,7 +2,7 @@
 
 /* Navbar container */
 .navbar {
-  background-color: transparent; /* Set background color to white */
+  background-color: white; /* Set background color to white */
   color: #333; /* Dark text color */
   padding: 10px;
   display: flex;
@@ -47,6 +47,13 @@
   color: #ffc107; /* Change to your preferred hover color */
 }
 
+/* Menu toggle */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
 /* Basket icon */
 .basket-icon {
   font-size: 24px;
@@ -55,13 +62,6 @@
 .basket-icon a {
   color: #333; /* Dark text color */
   text-decoration: none;
-}
-
-/* Menu toggle */
-.menu-toggle {
-  font-size: 24px;
-  cursor: pointer;
-  display: none;
 }
 
 /* Media query for screens up to 765px */

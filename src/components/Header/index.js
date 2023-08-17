@@ -7,8 +7,14 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((prevState) => !prevState);
   };
+
+  const navLinks = [
+    { title: 'Home', path: '/' },
+    { title: 'About Us', path: '/about' },
+    // Add more navigation items as needed
+  ];
 
   return (
     <nav className="navbar">
@@ -18,21 +24,20 @@ const Navbar = () => {
       <div className={`nav-items ${menuOpen ? 'open' : ''}`}>
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
-            <li className="nav-item">
-              <a href="/">Home</a>
-            </li>
-            <li className="nav-item">
-              <a href="/about">About Us</a>
-            </li>
+            {navLinks.map((link, index) => (
+              <li key={index} className="nav-item">
+                <a href={link.path}>{link.title}</a>
+              </li>
+            ))}
           </ul>
-        </div>
-        <div className="menu-toggle" onClick={handleMenuToggle}>
-          <FontAwesomeIcon icon={faBars} />
         </div>
         <div className="basket-icon">
           <a href="/basket">
             <FontAwesomeIcon icon={faShoppingBasket} />
           </a>
+        </div>
+        <div className="menu-toggle" onClick={handleMenuToggle}>
+          <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
     </nav>
