@@ -1,82 +1,25 @@
-/* header.css */
-
-/* Navbar container */
 .navbar {
-  background-color: white; /* Set background color to white */
-  color: #333; /* Dark text color */
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
 }
 
-/* Logo styles */
-.logo img {
-  width: 100px; /* Adjust as needed */
+.navbar-logo img {
+  height: 40px;
 }
 
-/* Navigation items container */
-.nav-items {
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-links {
-  margin-right: 20px;
-}
-
-.nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.nav-item {
-  margin-right: 15px;
-}
-
-.nav-item a {
-  color: #333; /* Dark text color */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-item a:hover {
-  color: #ffc107; /* Change to your preferred hover color */
-}
-
-/* Menu toggle */
-.menu-toggle {
-  font-size: 24px;
+.navbar-button button {
+  background-color: #eea3be;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  display: none;
-}
-
-/* Basket icon */
-.basket-icon {
-  font-size: 24px;
-}
-
-.basket-icon a {
-  color: #333; /* Dark text color */
-  text-decoration: none;
-}
-
-/* Media query for screens up to 765px */
-@media (max-width: 765px) {
-  .nav-links,
-  .nav-list,
-  .nav-item {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-items.open {
-    transform: translateX(0);
-  }
+  display: inline-flex;
+  padding: 0.9375rem 1.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
 }
