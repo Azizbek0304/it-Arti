@@ -15,7 +15,8 @@
   background-color: #eea3be;
   color: #ffffff;
   border: none;
-  border-radius: 5px;
+  min-width: 10rem;
+  border-radius: 1.875rem;
   cursor: pointer;
   display: inline-flex;
   padding: 0.9375rem 1.875rem;
