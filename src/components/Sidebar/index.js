@@ -23,24 +23,8 @@ const Sidebar = () => {
   const sidebarItems = [
     { icon: <FontAwesomeIcon icon={faHome} />, text: 'Home' },
     { icon: <FontAwesomeIcon icon={faAddressBook} />, text: 'Contact' },
-    {
-      icon: <FontAwesomeIcon icon={faTachometerAlt} />,
-      text: 'General',
-      subItems: [
-        { icon: null, text: 'Dashboard' },
-        { icon: null, text: 'Analytics' },
-      ],
-    },
     { icon: <FontAwesomeIcon icon={faEnvelope} />, text: 'Email' },
     { icon: <FontAwesomeIcon icon={faMap} />, text: 'Map' },
-    {
-      icon: <FontAwesomeIcon icon={faCog} />,
-      text: 'Settings',
-      subItems: [
-        { icon: null, text: 'Profile' },
-        { icon: null, text: 'Preferences' },
-      ],
-    },
   ];
 
   useEffect(() => {
