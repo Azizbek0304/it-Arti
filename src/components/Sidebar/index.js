@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './sidebar.css'; // Make sure to import your CSS file
+import './sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHome,
@@ -11,7 +11,7 @@ import {
   faCaretDown,
   faSun,
   faMoon,
-} from '@fortawesome/free-solid-svg-icons'; // Import FontAwesome icons
+} from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -23,7 +23,6 @@ const Sidebar = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
-    // Implement your dark mode logic here
   };
 
   const sidebarItems = [
@@ -33,9 +32,7 @@ const Sidebar = () => {
     { icon: <FontAwesomeIcon icon={faMap} />, text: 'Map' },
   ];
 
-  useEffect(() => {
-    // Add event listeners or any other initialization code here
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
@@ -49,7 +46,12 @@ const Sidebar = () => {
           />
         </div>
       </div>
-      <h2>Abdu</h2>
+      <div className="profile">
+        <div className="profile-picture">
+          <img src="" alt="Profile" />
+        </div>
+        <h1>Abdu</h1>
+      </div>
       <ul className="sidebar-list">
         {sidebarItems.map((item, index) => (
           <li key={index} className="sidebar-item">
