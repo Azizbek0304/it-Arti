@@ -13,6 +13,29 @@
   width: 70px;
 }
 
+.toggle-button-container {
+  position: absolute;
+  top: 0;
+  right: -2px; /* Adjust the value to control how much it's outside */
+  z-index: 2; /* Make sure it's above other content */
+  background-color: #333; /* Darker background color */
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
 .toggle-button {
   display: flex;
   justify-content: flex-end;

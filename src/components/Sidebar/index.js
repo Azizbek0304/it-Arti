@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './sidebar.css'; // Make sure to import your CSS file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faLightAngleRight,
-  faTimes,
   faHome,
   faAddressBook,
   faEnvelope,
   faMap,
   faAngleRight,
+  faAngleLeft,
   faCaretDown,
 } from '@fortawesome/free-solid-svg-icons'; // Import FontAwesome icons
 
@@ -32,10 +31,12 @@ const Sidebar = () => {
 
   return (
     <div className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
-      <div className="toggle-button" onClick={toggleSidebar}>
-        <FontAwesomeIcon
-          icon={isSidebarCollapsed ? faLightAngleRight : faTimes}
-        />
+      <div className="toggle-button-container" onClick={toggleSidebar}>
+        <div className="toggle-button">
+          <FontAwesomeIcon
+            icon={isSidebarCollapsed ? faAngleRight : faAngleLeft}
+          />
+        </div>
       </div>
       <ul className="sidebar-list">
         {sidebarItems.map((item, index) => (
@@ -54,13 +55,6 @@ const Sidebar = () => {
                   icon={isSidebarCollapsed ? faCaretDown : faAngleRight}
                   className="sub-menu-icon"
                 />
-                <ul className="sub-list">
-                  {item.subItems.map((subItem, subIndex) => (
-                    <li key={subIndex} className="sub-list-item">
-                      <FontAwesomeIcon icon={faAngleRight} /> {subItem.text}
-                    </li>
-                  ))}
-                </ul>
               </>
             )}
           </li>
