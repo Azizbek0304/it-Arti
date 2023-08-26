@@ -9,7 +9,7 @@ import {
   faAngleRight,
   faAngleLeft,
   faCaretDown,
-  faSunBright,
+  faSun,
   faMoon,
 } from '@fortawesome/free-solid-svg-icons'; // Import FontAwesome icons
 
@@ -23,6 +23,7 @@ const Sidebar = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
+    // Implement your dark mode logic here
   };
 
   const sidebarItems = [
@@ -32,12 +33,17 @@ const Sidebar = () => {
     { icon: <FontAwesomeIcon icon={faMap} />, text: 'Map' },
   ];
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    // Add event listeners or any other initialization code here
+  }, []);
 
   return (
     <div className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
       <div className="toggle-button-container">
-        <div className="toggle-button" onClick={toggleSidebar}>
+        <div
+          className={`toggle-button ${isSidebarCollapsed ? 'collapsed' : ''}`}
+          onClick={toggleSidebar}
+        >
           <FontAwesomeIcon
             icon={isSidebarCollapsed ? faAngleRight : faAngleLeft}
           />
@@ -65,8 +71,11 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
-      <div className="dark-mode-toggle" onClick={toggleDarkMode}>
-        <FontAwesomeIcon icon={isDarkMode ? faSunBright : faMoon} />
+      <div
+        className={`dark-mode-toggle ${isDarkMode ? 'dark' : ''}`}
+        onClick={toggleDarkMode}
+      >
+        <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
       </div>
     </div>
   );

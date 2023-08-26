@@ -16,39 +16,27 @@
 .toggle-button-container {
   position: absolute;
   top: 0;
-  right: -2px;
+  right: -10px;
   z-index: 2;
   background-color: #333;
   display: flex;
   align-items: center;
-  height: 100%;
+  justify-content: center;
   cursor: pointer;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
 }
 
 .toggle-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 100%;
+  width: 100%;
 }
 
-.sidebar.collapsed {
-  width: 70px;
-}
-
-.toggle-button {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 50px;
-  background-color: #333;
-  cursor: pointer;
-}
-
-.toggle-button i {
-  font-size: 1.5rem;
-}
-
+/* Sidebar items */
 .sidebar-list {
   padding: 0;
   list-style-type: none;
@@ -99,16 +87,20 @@
   align-items: center;
   position: absolute;
   bottom: 20px;
-  left: 50%; /* Center the toggle horizontally */
+  left: 50%;
   transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-color: #333;
   color: #fff;
   border-radius: 50%;
   cursor: pointer;
   z-index: 2;
   transition: background-color 0.3s;
+}
+
+.dark-mode-toggle.dark {
+  background-color: #555;
 }
 
 .dark-mode-toggle:hover {
