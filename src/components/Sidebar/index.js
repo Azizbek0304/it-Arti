@@ -9,13 +9,20 @@ import {
   faAngleRight,
   faAngleLeft,
   faCaretDown,
+  faSunBright,
+  faMoon,
 } from '@fortawesome/free-solid-svg-icons'; // Import FontAwesome icons
 
 const Sidebar = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarCollapsed(!isSidebarCollapsed);
+  };
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
   };
 
   const sidebarItems = [
@@ -25,14 +32,12 @@ const Sidebar = () => {
     { icon: <FontAwesomeIcon icon={faMap} />, text: 'Map' },
   ];
 
-  useEffect(() => {
-    // Add event listeners or any other initialization code here
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
-      <div className="toggle-button-container" onClick={toggleSidebar}>
-        <div className="toggle-button">
+      <div className="toggle-button-container">
+        <div className="toggle-button" onClick={toggleSidebar}>
           <FontAwesomeIcon
             icon={isSidebarCollapsed ? faAngleRight : faAngleLeft}
           />
@@ -60,6 +65,9 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
+      <div className="dark-mode-toggle" onClick={toggleDarkMode}>
+        <FontAwesomeIcon icon={isDarkMode ? faSunBright : faMoon} />
+      </div>
     </div>
   );
 };
