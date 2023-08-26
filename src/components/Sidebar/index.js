@@ -3,6 +3,7 @@ import './sidebar.css'; // Make sure to import your CSS file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBars,
+  faTimes,
   faHome,
   faAddressBook,
   faEnvelope,
@@ -32,7 +33,7 @@ const Sidebar = () => {
   return (
     <div className={`sidebar ${isSidebarCollapsed ? 'collapsed' : ''}`}>
       <div className="toggle-button" onClick={toggleSidebar}>
-        <FontAwesomeIcon icon={faBars} />
+        <FontAwesomeIcon icon={isSidebarCollapsed ? faBars : faTimes} />
       </div>
       <ul className="sidebar-list">
         {sidebarItems.map((item, index) => (
