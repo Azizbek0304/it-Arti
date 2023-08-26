@@ -48,7 +48,10 @@ const Sidebar = () => {
       </div>
       <div className="profile">
         <div className="profile-picture">
-          <img src="" alt="Profile" />
+          <img
+            src="https://media.istockphoto.com/id/1451587807/vector/user-profile-icon-vector-avatar-or-person-icon-profile-picture-portrait-symbol-vector.jpg?s=612x612&w=0&k=20&c=yDJ4ITX1cHMh25Lt1vI1zBn2cAKKAlByHBvPJ8gEiIg="
+            alt="Profile"
+          />
         </div>
         <h1>Abdu</h1>
       </div>
