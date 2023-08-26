@@ -1,71 +1,86 @@
-/* Sidebar Styles */
 .sidebar {
   width: 250px;
-  background-color: #f39c12;
-  color: #ffffff;
-  padding-top: 20px;
-  transition: transform 0.3s ease;
-  transform: translateX(0);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #262626;
+  color: #fff;
+  transition: width 0.3s;
 }
 
-.sidebar.open {
-  transform: translateX(-250px);
+.sidebar.collapsed {
+  width: 70px;
 }
 
-.sidebar-header {
-  text-align: center;
-  margin-bottom: 20px;
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #333;
+  cursor: pointer;
 }
 
-.sidebar-header h1 {
+.toggle-button i {
   font-size: 1.5rem;
 }
 
-.sidebar-toggle-button {
-  background-color: transparent;
-  border: none;
-  color: #ffffff;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.toggle-icon {
-  width: 30px;
-  height: 3px;
-  background-color: #ffffff;
-  transition: transform 0.3s ease;
-}
-
-.toggle-icon.open {
-  transform: rotate(90deg);
-}
-
-.sidebar-menu {
-  list-style: none;
+.sidebar-list {
   padding: 0;
+  list-style-type: none;
 }
 
-.menu-item {
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
-
-.menu-item:hover {
-  background-color: #e67e22;
-}
-
-.menu-icon {
-  margin-right: 10px;
-}
-
-.menu-item a {
-  color: #ffffff;
-  text-decoration: none;
+.sidebar-item {
   display: flex;
   align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-item:hover {
+  background-color: #333;
+}
+
+.sidebar-icon {
+  color: #ecf0f1;
+  font-size: 1.25rem;
+  margin-right: 15px;
+}
+
+.sidebar-text {
+  margin-left: 10px;
+  display: inline;
+  transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .sidebar-text {
+  opacity: 0;
+  margin-left: 0;
+}
+
+.sub-menu-icon {
   font-size: 1rem;
+  margin-left: auto;
+  transition: transform 0.3s;
+}
+
+.sidebar.collapsed .sub-menu-icon {
+  transform: rotate(-90deg);
+}
+
+.sub-list {
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+.sub-list-item {
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sub-list-item:hover {
+  color: #ddd;
 }
