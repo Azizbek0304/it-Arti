@@ -5,10 +5,8 @@ import {
   faBars,
   faHome,
   faAddressBook,
-  faTachometerAlt,
   faEnvelope,
   faMap,
-  faCog,
   faAngleRight,
   faCaretDown,
 } from '@fortawesome/free-solid-svg-icons'; // Import FontAwesome icons
