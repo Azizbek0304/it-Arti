@@ -49,6 +49,7 @@ const Sidebar = () => {
           />
         </div>
       </div>
+      <h2>Abdu</h2>
       <ul className="sidebar-list">
         {sidebarItems.map((item, index) => (
           <li key={index} className="sidebar-item">
