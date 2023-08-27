@@ -16,7 +16,7 @@
 
 .toggle-button-container {
   position: absolute;
-  top: 30%;
+  top: 60px;
   right: -10px;
   z-index: 2;
   background-color: #333;
