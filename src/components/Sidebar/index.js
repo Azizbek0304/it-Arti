@@ -53,7 +53,7 @@ const Sidebar = () => {
             alt="Profile"
           />
         </div>
-        <h1>Abdu</h1>
+        <h1 className={isSidebarCollapsed ? 'collapsed' : ''}>Abdu</h1>
       </div>
       <ul className="sidebar-list">
         {sidebarItems.map((item, index) => (

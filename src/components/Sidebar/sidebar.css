@@ -82,6 +82,10 @@
   transition: opacity 0.3s;
 }
 
+h1.collapsed {
+  display: none;
+}
+
 .sidebar.collapsed .sidebar-text {
   opacity: 0;
   margin-left: 0;
