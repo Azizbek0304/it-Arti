@@ -56,7 +56,10 @@
   list-style-type: none;
 }
 
-
+.collapsed-list {
+  align-items: baseline;
+  justify-content: center;
+}
 
 .sidebar-item {
   display: flex;
@@ -87,7 +90,7 @@ h1.collapsed {
 }
 
 .sidebar.collapsed .sidebar-text {
-  opacity: 0;
+  display: none;
   margin-left: 0;
 }
 
