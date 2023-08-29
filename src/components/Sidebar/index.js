@@ -49,7 +49,7 @@ const Sidebar = () => {
       <div className="profile">
         <div className="profile-picture">
           <img
-            src="https://media.istockphoto.com/id/1451587807/vector/user-profile-icon-vector-avatar-or-person-icon-profile-picture-portrait-symbol-vector.jpg?s=612x612&w=0&k=20&c=yDJ4ITX1cHMh25Lt1vI1zBn2cAKKAlByHBvPJ8gEiIg="
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw-RFxgCvFh0c9ad_IUJhtT6cKXp69gFuOzg&usqp=CAU"
             alt="Profile"
           />
         </div>
